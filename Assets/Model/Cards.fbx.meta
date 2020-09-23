@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: 57809512524924e3cb543ea35bdd42c8
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01 - Default
+    second: {fileID: 2100000, guid: fa583558eb75d42c981ddb0b676baf5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default
+    second: {fileID: 2100000, guid: d8d64291739d04f0390fe17bf3b1c636, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default
+    second: {fileID: 2100000, guid: dba48b27934ea42da909e9ffb2b810df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 04 - Default
+    second: {fileID: 2100000, guid: b846e2f63615e4ff2a372a7720765191, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 05 - Default
+    second: {fileID: 2100000, guid: eb5a14fced35a4525b6f07004e8e0c5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 06 - Default
+    second: {fileID: 2100000, guid: 1adba19faf61c4d65b7ecf3d890242b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 07 - Default
+    second: {fileID: 2100000, guid: af1a083acc76942589349184bcf8d647, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 08 - Default
+    second: {fileID: 2100000, guid: 0a7089326f6ad4ef2a28eafdc704bd1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 09 - Default
+    second: {fileID: 2100000, guid: 4ec43797dd35245608a3e757b27ec86a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1
+    second: {fileID: 2100000, guid: 13710b00d7ba24dcf9ff69ea5ff0d187, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 10
+    second: {fileID: 2100000, guid: 5696ffc253c0c4321b1e2f54726df47d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 11
+    second: {fileID: 2100000, guid: 04ae8ff3a57be48b2aa8c8d799ca8c8f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 12
+    second: {fileID: 2100000, guid: 421823cc7066a4344a68e8b8220c5446, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 13
+    second: {fileID: 2100000, guid: 2ce2a79274eca45c8b36216e30577df9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 13 - Default
+    second: {fileID: 2100000, guid: 586107e850160412cb1f59da4bc18407, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 14
+    second: {fileID: 2100000, guid: acf519b800a484493925dafe354dc20c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 14 - Default
+    second: {fileID: 2100000, guid: a888c9db29dab480b897e36a88467723, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 15
+    second: {fileID: 2100000, guid: fc077fcf5726a40e681d9d694f2c3ecf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 15 - Default
+    second: {fileID: 2100000, guid: 147f6c6e5a78a4db1af11f6e3ca91480, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 16
+    second: {fileID: 2100000, guid: ad57d5142aeb14ddbb3de7193464093f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 17
+    second: {fileID: 2100000, guid: 9561ad2703f46454782d92acd1f15723, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 18
+    second: {fileID: 2100000, guid: 954f1301fbace4631b3b645f79c773b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 19 - Default
+    second: {fileID: 2100000, guid: 405c5bea670d243d5b97b543a49d7b70, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 2
+    second: {fileID: 2100000, guid: 4e48d32bc88f34d5fbbcf89b16cf3ff5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 20
+    second: {fileID: 2100000, guid: 765b5a89d31794fb0ba8d82f05f8c273, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 20 - Default
+    second: {fileID: 2100000, guid: 90d16e6079284465a8ab6ab31a3a6e3b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 21
+    second: {fileID: 2100000, guid: 3b917c97ac9464de992f283e517fece6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 21 - Default
+    second: {fileID: 2100000, guid: c317979a17c10437cab72e6d67b6ef53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 22
+    second: {fileID: 2100000, guid: 9452455e5a21b4b7183dcd95e9f7eb7b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 22 - Default
+    second: {fileID: 2100000, guid: 4117d20754700470b9f26ed1b76e107b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 23
+    second: {fileID: 2100000, guid: d39b6feff89d648408698c44d88bf08f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 24
+    second: {fileID: 2100000, guid: 8234e70040b5041dbaa8362a1295b9bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 25
+    second: {fileID: 2100000, guid: 86946ced88e854e39b61f2fbc3772840, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 26
+    second: {fileID: 2100000, guid: eb8bc298c7289420e91c99d1bf19ff90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 27
+    second: {fileID: 2100000, guid: ec599544155404309bf33c50414ddb5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 28
+    second: {fileID: 2100000, guid: fa40ed58bd59a4cca85ebf648821e349, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 29
+    second: {fileID: 2100000, guid: 280d06237cc5d4320bd76d41d1bf72b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 3
+    second: {fileID: 2100000, guid: 3356ec2767df94a58bbd03735e49e563, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 30
+    second: {fileID: 2100000, guid: 6ec22b40d82ae4bc38d34aa72e3136fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 31
+    second: {fileID: 2100000, guid: a3d34a7bda1e74b7f9c99f41ff14caf5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 32
+    second: {fileID: 2100000, guid: 798babac87d144b55800481817f9d021, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 33
+    second: {fileID: 2100000, guid: 44c6016a44d504ada882139619157e0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 34
+    second: {fileID: 2100000, guid: 834b453ca786245a48192d67debc65b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 35
+    second: {fileID: 2100000, guid: 5cdde0a8f7e8b4efda9be3e1095389cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 36
+    second: {fileID: 2100000, guid: e523e18e741034c0ab1f56708a8f81fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 37
+    second: {fileID: 2100000, guid: 79d7acc80c580437daa8cfd4e1413db8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 39
+    second: {fileID: 2100000, guid: c635b4cce1f0a42c7a8610460f7fd6c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 4
+    second: {fileID: 2100000, guid: 8297471e8f3414292b01e66c4f177f5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 43
+    second: {fileID: 2100000, guid: 1bd8c82ef03ff4e8c9bee685113212f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 5
+    second: {fileID: 2100000, guid: e4ad3689b30204903ad88cb6af36ab95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 6
+    second: {fileID: 2100000, guid: b63800a763e2f4e189d94029b88affc0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 7
+    second: {fileID: 2100000, guid: 9e04dd2bff6494247a7d8ca836c7b8c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 8
+    second: {fileID: 2100000, guid: a512b3e584de744d8a52eb2c4d2f94cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 9
+    second: {fileID: 2100000, guid: ad5e257c6fd7740308da11ac15e71e1e, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ace of Clubs
+    second: {fileID: 2800000, guid: a1d694be367bf4f6d8b766c73bc9c1c7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ace of Diamonds
+    second: {fileID: 2800000, guid: 687b38806c5124c3dbf0406a39425cf4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ace of Hearts
+    second: {fileID: 2800000, guid: bf09accb5a15b4cd1b3c3ff279dcb4e1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ace of Spades
+    second: {fileID: 2800000, guid: 5ab4ebf50e6bc40caa7aab0515c2cdb8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Card Back
+    second: {fileID: 2800000, guid: b96088f536caf4488b24fd7b034780bb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Card Side
+    second: {fileID: 2800000, guid: 1616e654960ea44c6972d9950761babb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eight of Clubs
+    second: {fileID: 2800000, guid: 8d0735159f56f4b3891d9671d35aabec, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eight of Diamonds
+    second: {fileID: 2800000, guid: 4002bd6e37ec64cf1a213e484c024947, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eight of Hearts
+    second: {fileID: 2800000, guid: 7036c3a0826f1419bb8dfede0b8d887d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eight of Spades
+    second: {fileID: 2800000, guid: 21b7b4964ec504708b4e9cd44916d979, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Five of Clubs
+    second: {fileID: 2800000, guid: 5854614a4215441e5ada0d40066fe7c0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Five of Diamonds
+    second: {fileID: 2800000, guid: db9f55de1d3e942d3853d771383929f0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Five of Hearts
+    second: {fileID: 2800000, guid: b06a37ac0f72a4061a1068efdc4b6a85, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Five of Spades
+    second: {fileID: 2800000, guid: 4316e0ac9b7014d829b87ba3a3f31e44, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Four of Clubs
+    second: {fileID: 2800000, guid: cb3949191cc0b4873a9bbf2cad4c17b4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Four of Diamonds
+    second: {fileID: 2800000, guid: 036deb9d6783740eda5ab100502eae80, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Four of Hearts
+    second: {fileID: 2800000, guid: 7380ce6b50e78444f8e5a5569ec40b1c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Four of Spades
+    second: {fileID: 2800000, guid: f7f16567a7b5348c1bb7114b5b5c027b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Jack of Clubs
+    second: {fileID: 2800000, guid: 184c705a4bf4b44f5ba99687fd4bbbbc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Jack of Diamonds
+    second: {fileID: 2800000, guid: 0bfa9075f6a044dfd9181237d2eddd5b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Jack of Hearts
+    second: {fileID: 2800000, guid: ee837359751f84ebeaad3ff43d8943f9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Jack of Spades
+    second: {fileID: 2800000, guid: f3f38dd86c1144310acf0719636d0928, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: King of Clubs
+    second: {fileID: 2800000, guid: 1b7b06dcc5c3f4628bac679b2d87d68f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: King of Diamonds
+    second: {fileID: 2800000, guid: 46a834b1656794b4e8889a9bbdb799c9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: King of Hearts
+    second: {fileID: 2800000, guid: 8487f66a519a54074b07d183a1c610aa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: King of Spades
+    second: {fileID: 2800000, guid: 64c2454c82e934802864635ae08478df, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Nine of Clubs
+    second: {fileID: 2800000, guid: 9687e59c5f0cd4ec48434b90e92e018b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Nine of Diamonds
+    second: {fileID: 2800000, guid: f495069f57f484491ba76e0f141aca71, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Nine of Hearts
+    second: {fileID: 2800000, guid: e543759624b55458e9c33007039e381d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Nine of Spades
+    second: {fileID: 2800000, guid: 3e301fdcf812744d783dcd59955af739, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Queen of Clubs
+    second: {fileID: 2800000, guid: e5996329d589e4f3c95524faa0574284, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Queen of Diamonds
+    second: {fileID: 2800000, guid: 91aeaa962b4324c05992f0364c66be9c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Queen of Hearts
+    second: {fileID: 2800000, guid: df6c83fd46a6e41568a17c11720e4b50, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Queen of Spades
+    second: {fileID: 2800000, guid: 21acd6c189c3049259874e22b04879ec, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Seven of Clubs
+    second: {fileID: 2800000, guid: e3dd32bddb4184b3fa7f5d3101f96d5d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Seven of Diamonds
+    second: {fileID: 2800000, guid: 50171fc8ded994ee7a23752d3317cd5b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Seven of Hearts
+    second: {fileID: 2800000, guid: dc6d4fb035c4040c28fe0ec8b54d1886, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Seven of Spades
+    second: {fileID: 2800000, guid: 60cdebe71df764814911d00235c19499, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Six of Clubs
+    second: {fileID: 2800000, guid: f675b42b7e41f4a6fbe49b02ca302299, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Six of Diamonds
+    second: {fileID: 2800000, guid: df1cf7943c9da4fd2a0b6358f0edfff8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Six of Hearts
+    second: {fileID: 2800000, guid: 217f962f4870342b391443b488c252d3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Six of Spades
+    second: {fileID: 2800000, guid: 9d3c054e7b1474e7a8b70576f1b15a6a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ten of Clubs
+    second: {fileID: 2800000, guid: 7f80700fb4d7e465997d1400c4cd00a6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ten of Diamonds
+    second: {fileID: 2800000, guid: f2d6cbc10add04b54bc0da38c8705de3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ten of Hearts
+    second: {fileID: 2800000, guid: 1a830859d9d104c1e8c9ba8b96c47448, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ten of Spades
+    second: {fileID: 2800000, guid: bfb392f15a10648409279385f4bf17ab, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Three of Clubs
+    second: {fileID: 2800000, guid: 1fc025376fdaa40eeab67226ba680d31, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Three of Diamonds
+    second: {fileID: 2800000, guid: fd393f934409a4f8cbbc2cc87af381b0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Three of Hearts
+    second: {fileID: 2800000, guid: 38d8302a8889c4efcaa1f28c418a4dc4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Three of Spades
+    second: {fileID: 2800000, guid: 3d1c96ece4203481b927df8d547f969b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Two of Clubs
+    second: {fileID: 2800000, guid: 9ecd60b304f8b4c5aa8ad3fb688dacb8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Two of Diamonds
+    second: {fileID: 2800000, guid: b4ba50817caf84abebe8030adfe92b63, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Two of Hearts
+    second: {fileID: 2800000, guid: e9981d450f35f4534b203008e5f37e9c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Two of Spades
+    second: {fileID: 2800000, guid: ecde0a629ce3a4adeb096907ae6ddf1d, type: 3}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 20
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.19999999
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
