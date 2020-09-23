@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class Card
 {
-    Card(string suit, int rank)
+    public Card(CardType suit, int rank)
     {
         this.Suit = suit;
         this.Rank = rank;
     }
 
-    public string Suit { get; }
+    public CardType Suit { get; }
     public int Rank { get; }
+}
+
+public enum CardType
+{
+    Clubs,    //0
+    Diamonds, //1
+    Hearts,   //2
+    Spades    //3
+
 }
