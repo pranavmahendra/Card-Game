@@ -2,29 +2,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameManager : MonosingletonGeneric<GameManager>
 {
     public CardDeck CompleteDeck;
+    public UIManager UI_Manager;
+    private bool CardsHanded = false;
 
     public List<Player> players;
-    public List<Button> buttons;
 
-    public int PlayerTurn = 0;
+    [HideInInspector]
+    public static int PlayerTurn = 0;
 
     //For storing returned cards.
     public List<Card> comparisionCards = new List<Card>();
 
+
     void Start()
     {
         // Give cards to players.
-        buttons[1].onClick.AddListener(GiveCards);
+        UI_Manager.buttons[1].onClick.AddListener(GiveCards);
 
-        buttons[2].gameObject.SetActive(false);
-        buttons[3].gameObject.SetActive(false);
-
+        UI_Manager.DrawButtonsOf();
     }
+
 
     void Update()
     {
@@ -52,84 +53,72 @@ public class GameManager : MonosingletonGeneric<GameManager>
         //Deactivate original deck of cards.
         CompleteDeck.gameObject.SetActive(false);
 
+        CardsHanded = true;
+
     }
+
 
 
     private void GameBegin()
     {
         //Debug.Log("Game Started");
-        Debug.Log(comparisionCards.Count);
+        //Debug.Log(comparisionCards.Count);
 
         //While queue is not empty.
-        if (players[PlayerTurn].playerDeck.Count != 0)
+        if (players[PlayerTurn].playerDeck.Count != 0 && CardsHanded)
         {
             //For turn based
-            SwitchSide();
+            UI_Manager.SwitchSide();
 
-            ShuffleUIOff();
+            UI_Manager.ShuffleUIOff();
 
             //Comparision check
-            comparision();
+            Comparision();
         }
-        else
+        else if(players[PlayerTurn].playerDeck.Count == 0 && CardsHanded)
         {
             Debug.Log("Game Over");
+            UI_Manager.GameOverEnable();
         }
 
     }
 
 
 
-    private void ShuffleUIOff()
-    {
-        for (int i = 0; i < 2; i++)
-        {
-            buttons[i].gameObject.SetActive(false);
-        }
-    }
-
-
-    //Switch Sides.
-    private void SwitchSide()
-    {
-        switch (PlayerTurn)
-        {
-            case 0:
-                //Debug.Log("Draw Card from Player: " + players[PlayerTurn].gameObject.name);
-
-                buttons[3].gameObject.SetActive(false);
-                buttons[2].gameObject.SetActive(true);
-
-                break;
-            case 1:
-                //Debug.Log("Draw Card from Player: " + players[PlayerTurn].gameObject.name);
-
-                buttons[2].gameObject.SetActive(false);
-                buttons[3].gameObject.SetActive(true);
-
-                break;
-            default:
-                break;
-        }
-    }
-
-
-    private void comparision()
+    private void Comparision()
     {
         // Compare 2 cards which are present in the list.
-
         // Compare rank.
-
         //Greater one will win the match.
         if (comparisionCards.Count == 2)
         {
-            if (comparisionCards[0].Rank > comparisionCards[1].Rank)
+            if (comparisionCards[0].Rank > comparisionCards[1].Rank )
             {
                 Debug.Log("Player 1 has won this round");
+                players[0].playerDeck.Enqueue(comparisionCards[1]);
+                players[1].playerDeck.Dequeue();
             }
+
             else if (comparisionCards[0].Rank < comparisionCards[1].Rank)
             {
                 Debug.Log("Player 2 has won this round");
+                players[1].playerDeck.Enqueue(comparisionCards[0]);
+                players[0].playerDeck.Dequeue();
+            }
+
+            else if(comparisionCards[0].Rank == comparisionCards[1].Rank)
+            {
+                // clubs >
+                if (comparisionCards[0].Suit > comparisionCards[1].Suit)
+                {
+                    players[0].playerDeck.Enqueue(comparisionCards[1]);
+                    players[1].playerDeck.Dequeue();
+                }
+                else
+                {
+                    players[1].playerDeck.Enqueue(comparisionCards[0]);
+                    players[0].playerDeck.Dequeue();
+                }
             }
             comparisionCards.Clear();
         }

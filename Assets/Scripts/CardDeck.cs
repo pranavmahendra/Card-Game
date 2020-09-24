@@ -7,6 +7,8 @@ public class CardDeck : MonoBehaviour
     public Card[] cards;
     public GameObject[] cardModels;
 
+    public Transform mainDeckSpawn;
+
     //Create a initial deck of 52 cards using this constructor.
     private void Start()
     {
@@ -21,14 +23,14 @@ public class CardDeck : MonoBehaviour
         float zOffset = -0.02f;
         cards = new Card[52];
 
-        for (CardType suit = 0; suit <= CardType.Spades; suit++)
+        for (CardType suit = 0; suit <= CardType.S; suit++)
         {
             for (int rank = 1; rank <= 13; rank++)
             {
                 cards[j] = new Card(suit, rank, cardModels[j]);
 
                 // Instantiating the 3d models in scene.
-                Instantiate(cards[j].Image, new Vector3(transform.position.x + xOffset, transform.position.y, transform.position.z + zOffset), Quaternion.identity, this.transform);
+                Instantiate(cards[j].Image, new Vector3(mainDeckSpawn.transform.position.x + xOffset,mainDeckSpawn.transform.position.y, mainDeckSpawn.transform.position.z + zOffset), Quaternion.identity, mainDeckSpawn.transform);
                 j++;
                 //Debug.Log("Card is: " + suit + " " + rank);
                 xOffset += 0.2f;
@@ -61,7 +63,6 @@ public class CardDeck : MonoBehaviour
         }
 
     }
-
 
     // This is called in shuffling.
     private void Exchange(int card1, int card2)
