@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,38 +21,27 @@ public class GameManager : MonoBehaviour
 
     // The winner will enqueue the card of looser in its queue, and loooser will run dequeue.
 
-    private CardDeck CompleteDeck;
-    private Player player1;
-    private Player player2;
+    public CardDeck CompleteDeck;
+
+    public List<Player> players;
+    public List<Button> buttons;
+
+    public int PlayerTurn = 0;
 
     void Start()
     {
-
-        CompleteDeck = new CardDeck();
-
-        //Creating objects of players.
-        player1 = new Player();
-        player2 = new Player();
-
-        //Shuffling Deck
-        CompleteDeck.ShuffleDeck(25);
-
-        //CompleteDeck.PrintNewDeck();
-
         // Give cards to players.
-        GiveCards();
+        buttons[1].onClick.AddListener(GiveCards);
 
-        Debug.Log("Player 1 cards");
-        player1.PrintCards();
 
-        Debug.Log("Player 2 cards");
-        player2.PrintCards();
+        buttons[2].gameObject.SetActive(false);
+        buttons[3].gameObject.SetActive(false);
 
     }
 
     void Update()
     {
-        
+        GameBegin();
     }
 
 
@@ -59,12 +49,68 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < 26; i++)
         {
-            player1.playerDeck.Add(CompleteDeck.cards[i]);
+            players[0].playerDeck.Enqueue(CompleteDeck.cards[i]);
         }
 
         for (int i = 26; i < CompleteDeck.cards.Length; i++)
         {
-            player2.playerDeck.Add(CompleteDeck.cards[i]);
+            players[1].playerDeck.Enqueue(CompleteDeck.cards[i]);
+        }
+
+        players[0].InstantiatePlayerDeck();
+        players[1].InstantiatePlayerDeck();
+
+        CompleteDeck.gameObject.SetActive(false);
+
+    }
+
+    private void GameBegin()
+    {
+        Debug.Log("Game Started");
+
+        //While queue is not empty.
+        if (players[PlayerTurn].playerDeck.Count != 0)
+        {
+            SwitchSide();
+
+            for (int i = 0; i < 2; i++)
+            {
+                buttons[i].gameObject.SetActive(false);
+            }
+        }
+        else
+        {
+            Debug.Log("Game Over");
+        }
+
+    }
+
+    //Switch Sides.
+    private void SwitchSide()
+    {
+        switch (PlayerTurn)
+        {
+            case 0:
+                //Debug.Log("Draw Card from Player: " + players[PlayerTurn].gameObject.name);
+                buttons[3].gameObject.SetActive(false);
+                buttons[2].gameObject.SetActive(true);
+
+                break;
+            case 1:
+                //Debug.Log("Draw Card from Player: " + players[PlayerTurn].gameObject.name);
+                buttons[2].gameObject.SetActive(false);
+                buttons[3].gameObject.SetActive(true);
+
+                break;
+            default:
+                break;
         }
     }
+
+
+    public void SetTurn(int x)
+    {
+        PlayerTurn = x;
+    }
+
 }

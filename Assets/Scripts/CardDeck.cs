@@ -6,23 +6,36 @@ public class CardDeck : MonoBehaviour
 {
     public Card[] cards;
 
-    //Create a initial deck of 52 cards using this constructor.
+    public GameObject[] cardModels;
 
-    public CardDeck()
+    //Create a initial deck of 52 cards using this constructor.
+    private void Start()
+    {
+        CreatingInitialDeck();
+    }
+
+
+    private void CreatingInitialDeck()
     {
         int j = 0;
+        float xOffset = 0.2f;
+        float zOffset = -0.02f;
         cards = new Card[52];
 
         for (CardType suit = 0; suit <= CardType.Spades; suit++)
         {
             for (int rank = 1; rank <= 13; rank++)
             {
-                cards[j] = new Card(suit, rank);
+                cards[j] = new Card(suit, rank, cardModels[j]);
+
+                // Instantiating the 3d models in scene.
+                Instantiate(cards[j].Image, new Vector3(transform.position.x + xOffset, transform.position.y, transform.position.z + zOffset), Quaternion.identity, this.transform);
                 j++;
                 //Debug.Log("Card is: " + suit + " " + rank);
+                xOffset += 0.2f;
+                zOffset -= 0.03f;
             }
         }
-        //Debug.Log("----END----");
     }
 
 
@@ -32,7 +45,7 @@ public class CardDeck : MonoBehaviour
         int num1;
         int num2;
 
-        //Debug.Log("Shuffling the cards.");
+        Debug.Log("Shuffling the cards.");
         for (int i = 0; i < n; i++)
         {
             num1 = Random.Range(0, 26);
@@ -42,9 +55,15 @@ public class CardDeck : MonoBehaviour
 
             Exchange(num1, num2);
         }
+
+        for (int i = 0; i < cards.Length; i++)
+        {
+            cards[i].Image.gameObject.transform.position = new Vector3(0, 0, 0);
+        }
+
     }
 
-
+    // This is called in shuffling.
     private void Exchange(int card1, int card2)
     {
         //Debug.Log("Exchanging Card " + cards[card1].Suit + " " + cards[card1].Rank + " with " + cards[card2].Rank + " " + cards[card2].Suit);
