@@ -1,17 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CardDeck : MonoBehaviour
 {
     public Card[] cards;
     public GameObject[] cardModels;
-
+    public Button shuffle;
+    private Text shuffleText;
     public Transform mainDeckSpawn;
 
     //Create a initial deck of 52 cards using this constructor.
     private void Start()
     {
+        shuffleText = shuffle.GetComponentInChildren<Text>();
+
         CreatingInitialDeck();
     }
 
@@ -45,6 +49,8 @@ public class CardDeck : MonoBehaviour
     {
         int num1;
         int num2;
+
+        shuffleText.text = "Shuffled!!";
 
         Debug.Log("Shuffling the cards.");
         for (int i = 0; i < n; i++)
