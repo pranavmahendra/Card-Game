@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CardDeck
+public class CardDeck : MonoBehaviour
 {
     public Card[] cards;
 
