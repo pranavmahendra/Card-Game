@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     public Queue<Card> playerDeck = new Queue<Card>();
     private int count = 1;
-
+    public Card outCard;
 
     public void PrintCards()
     {
@@ -30,12 +30,18 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void AddCard(Card newCard)
+    {
+        playerDeck.Enqueue(newCard);
+    }
+
     public void PullCard()
     {
-        Card OutCard = playerDeck.Dequeue();
-        Debug.Log("Pulled Card is: " + OutCard.Suit + OutCard.Rank + " Updated Card Count: " + playerDeck.Count);
-        Destroy(OutCard.Image.gameObject);
+        outCard = playerDeck.Dequeue();
+        GameManager.Instance.comparisionCards.Add(outCard);
+        Debug.Log("Pulled Card is: " + outCard.Suit + outCard.Rank + " Updated Card Count: " + playerDeck.Count);
         //return OutCard;
     }
+
 }
 

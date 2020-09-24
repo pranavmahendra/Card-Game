@@ -5,7 +5,6 @@ using UnityEngine;
 public class CardDeck : MonoBehaviour
 {
     public Card[] cards;
-
     public GameObject[] cardModels;
 
     //Create a initial deck of 52 cards using this constructor.
@@ -62,6 +61,7 @@ public class CardDeck : MonoBehaviour
         }
 
     }
+
 
     // This is called in shuffling.
     private void Exchange(int card1, int card2)
