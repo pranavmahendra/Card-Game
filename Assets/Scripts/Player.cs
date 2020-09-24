@@ -28,15 +28,18 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void InstantiatePlayerDeck()
+    
+    public void InstantiatePlayerDeck(float y)
     {
-        float xOffset = 0.2f;
+        float xOffset = 0f;
+        float yOffset = 0f;
         float zOffset = -0.02f;
 
         foreach (Card cards in playerDeck)
         {
-            Instantiate(cards.Image, new Vector3(DeckSpawn.transform.position.x + xOffset, DeckSpawn.transform.position.y, DeckSpawn.transform.position.z + zOffset), Quaternion.identity, DeckSpawn);
+            Instantiate(cards.Image, new Vector3(DeckSpawn.transform.position.x + xOffset, DeckSpawn.transform.position.y + yOffset, DeckSpawn.transform.position.z + zOffset), Quaternion.identity, DeckSpawn);
             xOffset += 0.3f;
+            yOffset += y;
             zOffset -= 0.03f;
         }
     }
@@ -58,6 +61,14 @@ public class Player : MonoBehaviour
         Debug.Log("Pulled Card is: " + outCard.Suit + outCard.Rank + " Updated Card Count: " + playerDeck.Count);
         playerDeck.Enqueue(outCard);
         //return OutCard;
+    }
+
+    public void DeleteCards()
+    {
+       foreach(Transform cards in selectedCardSpawn)
+        {
+            Destroy(cards.gameObject);
+        }
     }
 
 }

@@ -47,8 +47,8 @@ public class GameManager : MonosingletonGeneric<GameManager>
             players[1].playerDeck.Enqueue(CompleteDeck.cards[i]);
         }
 
-        players[0].InstantiatePlayerDeck();
-        players[1].InstantiatePlayerDeck();
+        players[0].InstantiatePlayerDeck(-0.01f);
+        players[1].InstantiatePlayerDeck(0.01f);
 
         //Deactivate original deck of cards.
         CompleteDeck.gameObject.SetActive(false);
@@ -69,11 +69,16 @@ public class GameManager : MonosingletonGeneric<GameManager>
         {
             //For turn based
             UI_Manager.SwitchSide();
-
             UI_Manager.ShuffleUIOff();
 
+            CompleteDeck.DeleteDeck();
+
             //Comparision check
-            Comparision();
+            if (comparisionCards.Count == 2)
+            {
+                StartCoroutine(Comparision());
+            }
+
         }
         else if(players[PlayerTurn].playerDeck.Count == 0 && CardsHanded)
         {
@@ -85,43 +90,48 @@ public class GameManager : MonosingletonGeneric<GameManager>
 
 
 
-    private void Comparision()
+    IEnumerator Comparision()
     {
         // Compare 2 cards which are present in the list.
         // Compare rank.
         //Greater one will win the match.
-        if (comparisionCards.Count == 2)
+        if (comparisionCards[0].Rank > comparisionCards[1].Rank)
         {
-            if (comparisionCards[0].Rank > comparisionCards[1].Rank )
+            //Debug.Log("Player 1 has won this round");
+            UI_Manager.WinnerLabel("Player 1");
+            players[0].playerDeck.Enqueue(comparisionCards[1]);
+            players[1].playerDeck.Dequeue();
+        }
+
+        else if (comparisionCards[0].Rank < comparisionCards[1].Rank)
+        {
+            //Debug.Log("Player 2 has won this round");
+            UI_Manager.WinnerLabel("Player 2");
+            players[1].playerDeck.Enqueue(comparisionCards[0]);
+            players[0].playerDeck.Dequeue();
+        }
+
+        else if (comparisionCards[0].Rank == comparisionCards[1].Rank)
+        {
+            // clubs >
+            if (comparisionCards[0].Suit > comparisionCards[1].Suit)
             {
-                Debug.Log("Player 1 has won this round");
+                UI_Manager.WinnerLabel("Player 1");
                 players[0].playerDeck.Enqueue(comparisionCards[1]);
                 players[1].playerDeck.Dequeue();
             }
-
-            else if (comparisionCards[0].Rank < comparisionCards[1].Rank)
+            else
             {
-                Debug.Log("Player 2 has won this round");
+                UI_Manager.WinnerLabel("Player 2");
                 players[1].playerDeck.Enqueue(comparisionCards[0]);
                 players[0].playerDeck.Dequeue();
             }
-
-            else if(comparisionCards[0].Rank == comparisionCards[1].Rank)
-            {
-                // clubs >
-                if (comparisionCards[0].Suit > comparisionCards[1].Suit)
-                {
-                    players[0].playerDeck.Enqueue(comparisionCards[1]);
-                    players[1].playerDeck.Dequeue();
-                }
-                else
-                {
-                    players[1].playerDeck.Enqueue(comparisionCards[0]);
-                    players[0].playerDeck.Dequeue();
-                }
-            }
-            comparisionCards.Clear();
         }
+        comparisionCards.Clear();
+        yield return new WaitForSeconds(2);
+        UI_Manager.WinnerCanvas.gameObject.SetActive(false);
+        players[0].DeleteCards();
+        players[1].DeleteCards();
     }
 
 

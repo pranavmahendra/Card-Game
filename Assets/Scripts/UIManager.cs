@@ -2,15 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
     public List<Button> buttons;
+    public Canvas WinnerCanvas;
+    private TextMeshProUGUI winner;
     public Image GameOverCanvas;
 
     private void Start()
     {
         GameOverCanvas.gameObject.SetActive(false);
+      
+
+        winner = WinnerCanvas.GetComponentInChildren<TextMeshProUGUI>();
     }
 
     public void DrawButtonsOf()
@@ -56,5 +62,11 @@ public class UIManager : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public void WinnerLabel(string Winner)
+    {
+        WinnerCanvas.gameObject.SetActive(true);
+        winner.text = Winner + " has won this round";
     }
 }

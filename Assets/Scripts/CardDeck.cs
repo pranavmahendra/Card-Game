@@ -83,4 +83,12 @@ public class CardDeck : MonoBehaviour
         }
     }
 
+    public void DeleteDeck()
+    {
+        foreach(Transform card in mainDeckSpawn)
+        {
+            Destroy(card.gameObject);
+        }
+    }
+
 }
