@@ -13,6 +13,13 @@ public class Player : MonoBehaviour
     public Transform DeckSpawn;
     public Transform selectedCardSpawn;
 
+    Vector3 newCardSpawn;
+
+    private void Start()
+    {
+        newCardSpawn = new Vector3(5.5f, DeckSpawn.transform.position.y, DeckSpawn.transform.position.z);
+    }
+
     private void Update()
     {
         scoreCounter.text = "Cards: " + playerDeck.Count;
@@ -63,12 +70,25 @@ public class Player : MonoBehaviour
         //return OutCard;
     }
 
-    public void DeleteCards()
+    public void ClearSelectedCards()
     {
        foreach(Transform cards in selectedCardSpawn)
         {
             Destroy(cards.gameObject);
         }
+    }
+
+    // For deleting card from game.
+    public void DeleteCardDeck()
+    {
+        Destroy(DeckSpawn.GetComponent<Transform>().GetChild(0).gameObject);
+    }
+
+    //For adding card inside game.
+    public void AddCardDeck(Card newCard)
+    {       
+        Instantiate(newCard.Image, newCardSpawn, Quaternion.identity, DeckSpawn);
+        newCardSpawn.x += 0.3f;
     }
 
 }

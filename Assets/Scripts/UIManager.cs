@@ -62,11 +62,28 @@ public class UIManager : MonoBehaviour
             default:
                 break;
         }
+
     }
 
     public void WinnerLabel(string Winner)
     {
         WinnerCanvas.gameObject.SetActive(true);
         winner.text = Winner + " has won this round";
+    }
+
+    public void EnableDrawButton()
+    {
+        for (int i = 2; i < buttons.Count; i++)
+        {
+            buttons[i].gameObject.SetActive(true);
+        }
+    }
+
+    public void DisableDrawButton()
+    {
+        for (int i = 2; i < buttons.Count; i++)
+        {
+            buttons[i].gameObject.SetActive(false);
+        }
     }
 }
